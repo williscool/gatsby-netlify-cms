@@ -1,4 +1,4 @@
-# Will.vc
+# boujeehacker.com
 
 A gatsby + netlify-cms website
 

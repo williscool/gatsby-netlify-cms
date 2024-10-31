@@ -1,6 +1,6 @@
 ---
 templateKey: footer
-title: will.vc
+title: boujeehacker.com
 description: software engineer + entreprenuer + adviser + consultant + occasional freelancer
 linksTitle: "Links to Stuff thats cool"
 logoImage:
@@ -26,7 +26,7 @@ footerLinks:
     linkURL: 'https://elevationfirm.com/'
   - image: /img/GitHub-Mark-Light-120px-plus.png
     imageAlt: The source of this site
-    label: will.vc on github
-    linkURL: 'https://github.com/williscool/will.vc'
+    label: boujeehacker.com on github
+    linkURL: 'https://github.com/williscool/boujeehacker.com'
 ---
 
