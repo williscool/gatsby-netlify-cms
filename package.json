@@ -6,11 +6,11 @@
   "dependencies": {
     "date-fns": "^4.1.0",
     "decap-cms-app": "^3.3.3",
+    "dotenv": "^16.4.5",
     "gatsby": "^5.13.7",
     "gatsby-plugin-decap-cms": "^4.0.4",
     "gatsby-plugin-google-analytics": "^5.13.1",
     "gatsby-plugin-netlify": "^5.1.1",
-    "gatsby-plugin-react-helmet": "^6.1.0",
     "gatsby-plugin-sass": "^6.13.1",
     "gatsby-remark-images": "^7.13.1",
     "gatsby-source-filesystem": "^5.13.1",
@@ -23,7 +23,6 @@
     "react": "^18.2.0",
     "react-commonmark": "^3.0.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^5.2.0",
     "react-icons": "^3.8.0",
     "sass": "^1.80.5",
     "uuid": "^3.2.1"

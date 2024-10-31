@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Helmet from "react-helmet";
 import { isBefore } from "date-fns";
 import ReactMarkdown from "react-commonmark";
 
@@ -46,11 +45,6 @@ PastMeetupsPageTemplate.propTypes = {
 
 const PastMeetupsPage = ({ data }) => {
   const { markdownRemark: page } = data;
-  const {
-    frontmatter: {
-      seo: { title: seoTitle, description: seoDescription, browserTitle },
-    },
-  } = page;
   let meetups = data.allMarkdownRemark.edges;
 
   // Find all the meetups that occured in the past
@@ -60,11 +54,6 @@ const PastMeetupsPage = ({ data }) => {
 
   return (
     <Layout footerData={data.footerData} navbarData={data.navbarData}>
-      <Helmet>
-        <meta name="title" content={seoTitle} />
-        <meta name="description" content={seoDescription} />
-        <title>{browserTitle}</title>
-      </Helmet>
       <PastMeetupsPageTemplate
         title={page.frontmatter.title}
         content={page.html}
@@ -73,6 +62,22 @@ const PastMeetupsPage = ({ data }) => {
     </Layout>
   );
 };
+
+export function Head({ location, params, data, pageContext }) {
+  const { markdownRemark: page } = data;
+  const {
+    frontmatter: {
+      seo: { title: seoTitle, description: seoDescription, browserTitle },
+    },
+  } = page;
+
+  return (<>
+    <meta name="title" content={seoTitle} />
+    <meta name="description" content={seoDescription} />
+    <title>{browserTitle}</title>
+  </>
+  )
+}
 
 PastMeetupsPage.propTypes = {
   data: PropTypes.object.isRequired,

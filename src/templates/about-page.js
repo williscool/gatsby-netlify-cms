@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import ReactMarkdown from "react-commonmark";
-import Helmet from "react-helmet";
 
 import Layout from "../components/Layout";
 import HTMLContent from "../components/Content";
@@ -67,23 +66,29 @@ export const AboutPageTemplate = props => {
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: page, footerData, navbarData } = data;
+  return (
+    <Layout footerData={footerData} navbarData={navbarData}>
+      <AboutPageTemplate page={{ ...page, bodyIsMarkdown: false }} />
+    </Layout>
+  );
+};
+
+export function Head({ location, params, data, pageContext }) {
+
+  const { markdownRemark: page, footerData, navbarData } = data;
   const {
     frontmatter: {
       seo: { title: seoTitle, description: seoDescription, browserTitle },
     },
   } = page;
-
-  return (
-    <Layout footerData={footerData} navbarData={navbarData}>
-      <Helmet>
-        <meta name="title" content={seoTitle} />
-        <meta name="description" content={seoDescription} />
-        <title>{browserTitle}</title>
-      </Helmet>
-      <AboutPageTemplate page={{ ...page, bodyIsMarkdown: false }} />
-    </Layout>
-  );
-};
+  
+  return (<>
+    <meta name="title" content={seoTitle} />
+    <meta name="description" content={seoDescription} />
+    <title>{browserTitle}</title>
+  </>
+  )
+}
 
 AboutPage.propTypes = {
   data: PropTypes.object.isRequired,

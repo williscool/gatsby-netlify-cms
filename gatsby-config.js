@@ -1,9 +1,12 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 module.exports = {
   siteMetadata: {
     title: "Will Harris website dawg",
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
