@@ -3,7 +3,6 @@ module.exports = {
     title: "Will Harris website dawg",
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",

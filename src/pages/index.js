@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Helmet from "react-helmet";
 import { isAfter } from "date-fns";
 import ReactMarkdown from "react-commonmark";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 
 import Layout from "../components/Layout";
@@ -29,7 +28,7 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
                   target="_blank"
                   rel="noopener"
                 >
-                  <FaLinkedin size={32}/>
+                  <FaLinkedin size={32} />
                 </a>
               </span>
               <span>
@@ -119,13 +118,10 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
 class HomePage extends React.Component {
   render() {
     const { data } = this.props;
+    const { frontmatter: home } = data.homePageData.edges[0].node;
     const {
       data: { footerData, navbarData },
     } = this.props;
-    const { frontmatter: home } = data.homePageData.edges[0].node;
-    const {
-      seo: { title: seoTitle, description: seoDescription, keywords: seoKeywords, browserTitle },
-    } = home;
     let upcomingMeetup = null;
     // Find the next meetup that is closest to today
     data.allMarkdownRemark.edges.every(item => {
@@ -139,16 +135,25 @@ class HomePage extends React.Component {
     });
     return (
       <Layout footerData={footerData} navbarData={navbarData}>
-        <Helmet>
-          <meta name="title" content={seoTitle} />
-          <meta name="description" content={seoDescription} />
-          <meta name="keywords" content={seoKeywords} />
-          <title>{browserTitle}</title>
-        </Helmet>
         <HomePageTemplate home={home} upcomingMeetup={upcomingMeetup} />
       </Layout>
     );
   }
+}
+
+export function Head({ location, params, data, pageContext }) {
+  const { frontmatter: home } = data.homePageData.edges[0].node;
+  const {
+    seo: { title: seoTitle, description: seoDescription, keywords: seoKeywords, browserTitle },
+  } = home;
+
+  return (<>
+    <meta name="title" content={seoTitle} />
+    <meta name="description" content={seoDescription} />
+    <meta name="keywords" content={seoKeywords} />
+    <title>{browserTitle}</title>
+  </>
+  )
 }
 
 HomePage.propTypes = {

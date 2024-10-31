@@ -1,5 +1,4 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 
 import "../styles";
@@ -8,14 +7,17 @@ import { Footer } from "../components/Footer";
 
 const TemplateWrapper = ({ footerData = null, navbarData = null, children }) => (
   <div>
-    <Helmet>
-      <html lang="en" />
-    </Helmet>
     <Navbar data={navbarData} />
     <main>{children}</main>
     <Footer data={footerData} />
   </div>
 );
+
+export function Head() {
+  return (
+    <html lang="en" />
+  )
+}
 
 export const query = graphql`
   fragment LayoutFragment on Query {
