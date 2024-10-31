@@ -4,7 +4,7 @@ menuItems:
   - label: home
     linkType: internal
     linkURL: /
-  - label: blog
+  - label: articles
     linkType: external
     linkURL: 'https://boujeehacker.substack.com'
   - label: contact
