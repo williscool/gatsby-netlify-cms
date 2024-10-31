@@ -1,4 +1,4 @@
-import CMS, { init } from 'decap-cms-app'
+import CMS, {init} from 'decap-cms-app'
 
 import AboutPagePreview from "./preview-templates/AboutPagePreview";
 import HomePagePreview from "./preview-templates/HomePagePreview";
