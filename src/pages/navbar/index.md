@@ -9,6 +9,6 @@ menuItems:
     linkURL: 'https://boujeehacker.substack.com'
   - label: contact
     linkType: external
-    linkURL: 'mailto:wharris@upscalews.com'
+    linkURL: 'https://calendly.com/wharris-cal'
 ---
 
