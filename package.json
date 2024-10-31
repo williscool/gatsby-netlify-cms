@@ -1,11 +1,13 @@
 {
   "name": "boujeehacker.com",
   "description": "boujeehacker.com the website a Gatsby and Netlify CMS project",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "William Harris",
   "dependencies": {
     "date-fns": "^4.1.0",
+    "decap-cms-app": "^3.3.3",
     "gatsby": "^5.13.7",
+    "gatsby-plugin-decap-cms": "^4.0.4",
     "gatsby-plugin-google-analytics": "^5.13.1",
     "gatsby-plugin-netlify": "^5.1.1",
     "gatsby-plugin-react-helmet": "^6.1.0",
@@ -18,13 +20,13 @@
     "netlify-cms": "^2.1.1",
     "parcel-bundler": "^1.9.4",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
+    "react": "^18.2.0",
     "react-commonmark": "^3.0.0",
-    "react-dom": "^16.4.1",
+    "react-dom": "^18.2.0",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.8.0",
-    "uuid": "^3.2.1",
-    "sharp": "^0.33.5"
+    "sass": "^1.80.5",
+    "uuid": "^3.2.1"
   },
   "keywords": [
     "gatsby"

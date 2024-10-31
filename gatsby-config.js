@@ -19,8 +19,6 @@ module.exports = {
         name: "images",
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -28,15 +26,9 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-netlify-cms",
+    resolve: "gatsby-plugin-decap-cms",
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-favicon`, // https://github.com/Creatiwity/gatsby-plugin-favicon
-      options: {
-        logo: "./src/img/favicon.png",
       },
     },
     {

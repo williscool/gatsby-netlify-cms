@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import format from "date-fns/format";
+import  { format } from "date-fns";
 
 import MeetupTemplate from "../../templates/meetup";
 

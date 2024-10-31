@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
-import isBefore from "date-fns/is_before";
+import { isBefore } from "date-fns";
 import ReactMarkdown from "react-commonmark";
 
 import MeetupTemplate from "./meetup";
