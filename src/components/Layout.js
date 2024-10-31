@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Script } from "gatsby";
 
 import "../styles";
 import { Navbar } from "../components/Navbar";
@@ -18,7 +18,7 @@ export function Head() {
     <>
       <html lang="en" />
 
-      <script id="segment_with_posthog">{`
+      <Script id="segment_with_posthog">{`
         var SEGMENT_API_KEY = '${process.env.GATSBY_SEGMENT_API_KEY}';
         var POSTHOG_API_KEY = '${process.env.GATSBY_POSTHOG_API_KEY}';
 
@@ -40,9 +40,9 @@ export function Head() {
           })
 
         }}();
-      `}</script>  
+      `}</Script>  
       
-      <script id="rudderstack">{`
+      <Script id="rudderstack">{`
 
         // REPLACE THE API KEYS!!!!
         var RUDDERSTACK_API_KEY = '${process.env.GATSBY_RUDDERSTACK_API_KEY}';
@@ -80,7 +80,7 @@ export function Head() {
             }
           );
         });
-      `}</script>  
+      `}</Script>  
       
     </>
   )
