@@ -33,27 +33,6 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
               </span>
               <span>
                 <a
-                  href="https://nomadlist.com/@williscool"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <img width={32} height={32}
-                    src="/img/nomadlist-icon.svg"
-                    alt="nomadlist"
-                  />
-                </a>
-              </span>
-              <span>
-                <a
-                  href="https://github.com/williscool"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <FaGithub size={32} />
-                </a>
-              </span>
-              <span>
-                <a
                   href="https://twitter.com/boujeehacker"
                   target="_blank"
                   rel="noopener"
@@ -66,6 +45,27 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
               </span>
               <span>
                 <a
+                  href="https://github.com/williscool"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <FaGithub size={32} />
+                </a>
+              </span>
+              {/* <span>
+                <a
+                  href="https://nomadlist.com/@williscool"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img width={32} height={32}
+                    src="/img/nomadlist-icon.svg"
+                    alt="nomadlist"
+                  />
+                </a>
+              </span> */}
+              {/* <span>
+                <a
                   href="https://angel.co/u/william-harris-1"
                   target="_blank"
                   rel="noopener"
@@ -75,7 +75,7 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
                     alt="angellist"
                   />
                 </a>
-              </span>
+              </span> */}
             </div>
 
           </div>
