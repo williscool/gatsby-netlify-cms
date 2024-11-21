@@ -8,7 +8,7 @@ menuItems:
     linkType: external
     linkURL: 'https://boujeehacker.substack.com'
   - label: contact
-    linkType: external
-    linkURL: 'https://calendly.com/wharris-cal'
+    linkType: internal
+    linkURL: /contact
 ---
 
