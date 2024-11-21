@@ -10,11 +10,12 @@ import { graphql,  navigate  } from "gatsby";
  * 
  */
 
-const ContactPage = () => {
+const ContactPage = ({ data }) => {
+  const { markdownRemark: page } = data;
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('https://calendly.com/wharris-cal')
+      navigate(page.frontmatter.redirectTo)
     }, 3000)
 
     return () => clearTimeout(timer)
@@ -43,3 +44,14 @@ export function Head() {
 }
 
 export default ContactPage;
+
+export const contactPageQuery = graphql`
+  query ContactPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        redirectTo
+      }
+    }
+  }
+`;
